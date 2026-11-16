@@ -24,7 +24,7 @@ class Restaurante:
         """Retorna uma representação em string do restaurante."""
 
         return f'{self._nome} | {self._categoria}'
-    
+
     @classmethod
     def listar_restaurantes(cls):
         """Exibe uma lista formatada de todos os restaurantes."""
@@ -59,7 +59,7 @@ class Restaurante:
         Parâmetros:
         - cliente (str): O nome do cliente que fez a avaliação.
         - nota (float): A nota atribuída ao restaurante (entre 1 e 5).
-        """        
+        """
         if 0 < nota <= 5:
             avaliacao = Avaliacao(cliente, nota)
             self._avaliacao.append(avaliacao)
@@ -75,7 +75,7 @@ class Restaurante:
         return media
 
     def adicionar_no_cardapio(self,item):
-        """ädiciona um item (bebida ou prato) ao cardápio do restaurante."""
+        """Adiciona um item (bebida ou prato) ao cardápio do restaurante."""
         if isinstance(item, ItemCardapio):
             self._cardapio.append(item)
 
@@ -90,6 +90,3 @@ class Restaurante:
             else:
                 mensagem_bebida = f'{i}. Nome: {item._nome} | Preço: R${item._preco} | Tamanho: {item.tamanho}'
                 print(mensagem_bebida)
-            
-
-            
